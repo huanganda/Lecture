@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.CourseOverview" table="course_overview" schema="onelecture">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="courseOverviewStudentNumber">
+            <column name="course_overview_student_number" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="courseOverviewStudentName">
+            <column name="course_overview_student_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="courseOverviewStudentMajor">
+            <column name="course_overview_student_major" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="courseOverviewStudentSex">
+            <column name="course_overview_student_sex" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="courseOverviewLessonId">
+            <column name="course_overview_lesson_id" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

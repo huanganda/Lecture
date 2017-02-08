@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Lesson" table="lesson" schema="onelecture">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="lessonTermId">
+            <column name="lesson_term_id" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonInstituteName">
+            <column name="lesson_institute_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonNumber">
+            <column name="lesson_number" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonName">
+            <column name="lesson_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonMark">
+            <column name="lesson_mark" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonSelectedNumber">
+            <column name="lesson_selected_number" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonLimitNumber">
+            <column name="lesson_limit_number" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonType">
+            <column name="lesson_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonTeacherName">
+            <column name="lesson_teacher_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonTotalweek">
+            <column name="lesson_totalweek" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonTime">
+            <column name="lesson_time" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonLocation">
+            <column name="lesson_location" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonCreditType">
+            <column name="lesson_credit_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonTips">
+            <column name="lesson_tips" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonAvgCommentMark">
+            <column name="lesson_avg_comment_mark" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lessonMale">
+            <column name="lesson_male" sql-type="int(255)" not-null="true"/>
+        </property>
+        <property name="lessonFemale">
+            <column name="lesson_female" sql-type="int(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
