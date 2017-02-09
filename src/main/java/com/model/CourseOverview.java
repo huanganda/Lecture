@@ -1,5 +1,9 @@
 package com.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "course_overview", schema = "onelecture", catalog = "")
 public class CourseOverview {
     private int id;
     private String courseOverviewStudentNumber;
@@ -8,6 +12,8 @@ public class CourseOverview {
     private String courseOverviewStudentSex;
     private String courseOverviewLessonId;
 
+    @Id
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -16,6 +22,8 @@ public class CourseOverview {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "course_overview_student_number", nullable = true, length = 255)
     public String getCourseOverviewStudentNumber() {
         return courseOverviewStudentNumber;
     }
@@ -24,6 +32,8 @@ public class CourseOverview {
         this.courseOverviewStudentNumber = courseOverviewStudentNumber;
     }
 
+    @Basic
+    @Column(name = "course_overview_student_name", nullable = true, length = 255)
     public String getCourseOverviewStudentName() {
         return courseOverviewStudentName;
     }
@@ -32,6 +42,8 @@ public class CourseOverview {
         this.courseOverviewStudentName = courseOverviewStudentName;
     }
 
+    @Basic
+    @Column(name = "course_overview_student_major", nullable = true, length = 255)
     public String getCourseOverviewStudentMajor() {
         return courseOverviewStudentMajor;
     }
@@ -40,6 +52,8 @@ public class CourseOverview {
         this.courseOverviewStudentMajor = courseOverviewStudentMajor;
     }
 
+    @Basic
+    @Column(name = "course_overview_student_sex", nullable = true, length = 255)
     public String getCourseOverviewStudentSex() {
         return courseOverviewStudentSex;
     }
@@ -48,6 +62,8 @@ public class CourseOverview {
         this.courseOverviewStudentSex = courseOverviewStudentSex;
     }
 
+    @Basic
+    @Column(name = "course_overview_lesson_id", nullable = true, length = 255)
     public String getCourseOverviewLessonId() {
         return courseOverviewLessonId;
     }

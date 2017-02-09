@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/onelecture</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <mapping resource="CourseOverview.hbm.xml"/>
+        <mapping class="com.model.CourseOverview"/>
+        <mapping resource="Lesson.hbm.xml"/>
+        <mapping class="com.model.Lesson"/>
+        <mapping resource="Student.hbm.xml"/>
+        <mapping class="com.model.Student"/>
+        <mapping resource="Teacher.hbm.xml"/>
+        <mapping class="com.model.Teacher"/>
+        <mapping resource="BaseTeacher.hbm.xml"/>
+        <mapping class="com.model.BaseTeacher"/>
+        <mapping resource="BaseTeacher.hbm.xml"/>
+        <mapping resource="BaseTeacher.hbm.xml"/>
+        <mapping resource="CourseOverview.hbm.xml"/>
+        <mapping resource="Lesson.hbm.xml"/>
+        <mapping resource="Student.hbm.xml"/>
+        <mapping resource="Teacher.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

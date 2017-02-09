@@ -1,13 +1,19 @@
 package com.model;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Student {
     private int id;
     private String studentName;
-    private String studentNickname;
     private String studentPassword;
-    private String studentMajor;
-    private String studentEmail;
+    private String studentNumber;
 
+    @Id
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -16,6 +22,8 @@ public class Student {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "student_name", nullable = true, length = 255)
     public String getStudentName() {
         return studentName;
     }
@@ -24,14 +32,8 @@ public class Student {
         this.studentName = studentName;
     }
 
-    public String getStudentNickname() {
-        return studentNickname;
-    }
-
-    public void setStudentNickname(String studentNickname) {
-        this.studentNickname = studentNickname;
-    }
-
+    @Basic
+    @Column(name = "student_password", nullable = true, length = 255)
     public String getStudentPassword() {
         return studentPassword;
     }
@@ -40,20 +42,14 @@ public class Student {
         this.studentPassword = studentPassword;
     }
 
-    public String getStudentMajor() {
-        return studentMajor;
+    @Basic
+    @Column(name = "student_number", nullable = true, length = 255)
+    public String getStudentNumber() {
+        return studentNumber;
     }
 
-    public void setStudentMajor(String studentMajor) {
-        this.studentMajor = studentMajor;
-    }
-
-    public String getStudentEmail() {
-        return studentEmail;
-    }
-
-    public void setStudentEmail(String studentEmail) {
-        this.studentEmail = studentEmail;
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
     }
 
     @Override
@@ -65,13 +61,9 @@ public class Student {
 
         if (id != student.id) return false;
         if (studentName != null ? !studentName.equals(student.studentName) : student.studentName != null) return false;
-        if (studentNickname != null ? !studentNickname.equals(student.studentNickname) : student.studentNickname != null)
-            return false;
         if (studentPassword != null ? !studentPassword.equals(student.studentPassword) : student.studentPassword != null)
             return false;
-        if (studentMajor != null ? !studentMajor.equals(student.studentMajor) : student.studentMajor != null)
-            return false;
-        if (studentEmail != null ? !studentEmail.equals(student.studentEmail) : student.studentEmail != null)
+        if (studentNumber != null ? !studentNumber.equals(student.studentNumber) : student.studentNumber != null)
             return false;
 
         return true;
@@ -81,10 +73,8 @@ public class Student {
     public int hashCode() {
         int result = id;
         result = 31 * result + (studentName != null ? studentName.hashCode() : 0);
-        result = 31 * result + (studentNickname != null ? studentNickname.hashCode() : 0);
         result = 31 * result + (studentPassword != null ? studentPassword.hashCode() : 0);
-        result = 31 * result + (studentMajor != null ? studentMajor.hashCode() : 0);
-        result = 31 * result + (studentEmail != null ? studentEmail.hashCode() : 0);
+        result = 31 * result + (studentNumber != null ? studentNumber.hashCode() : 0);
         return result;
     }
 }

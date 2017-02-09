@@ -1,5 +1,11 @@
 package com.model;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Lesson {
     private int id;
     private String lessonTermId;
@@ -20,6 +26,8 @@ public class Lesson {
     private Integer lessonMale;
     private Integer lessonFemale;
 
+    @Id
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -28,6 +36,8 @@ public class Lesson {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "lesson_term_id", nullable = true, length = 255)
     public String getLessonTermId() {
         return lessonTermId;
     }
@@ -36,6 +46,8 @@ public class Lesson {
         this.lessonTermId = lessonTermId;
     }
 
+    @Basic
+    @Column(name = "lesson_institute_name", nullable = true, length = 255)
     public String getLessonInstituteName() {
         return lessonInstituteName;
     }
@@ -44,6 +56,8 @@ public class Lesson {
         this.lessonInstituteName = lessonInstituteName;
     }
 
+    @Basic
+    @Column(name = "lesson_number", nullable = true, length = 255)
     public String getLessonNumber() {
         return lessonNumber;
     }
@@ -52,6 +66,8 @@ public class Lesson {
         this.lessonNumber = lessonNumber;
     }
 
+    @Basic
+    @Column(name = "lesson_name", nullable = true, length = 255)
     public String getLessonName() {
         return lessonName;
     }
@@ -60,6 +76,8 @@ public class Lesson {
         this.lessonName = lessonName;
     }
 
+    @Basic
+    @Column(name = "lesson_mark", nullable = true, length = 255)
     public String getLessonMark() {
         return lessonMark;
     }
@@ -68,6 +86,8 @@ public class Lesson {
         this.lessonMark = lessonMark;
     }
 
+    @Basic
+    @Column(name = "lesson_selected_number", nullable = true, length = 255)
     public String getLessonSelectedNumber() {
         return lessonSelectedNumber;
     }
@@ -76,6 +96,8 @@ public class Lesson {
         this.lessonSelectedNumber = lessonSelectedNumber;
     }
 
+    @Basic
+    @Column(name = "lesson_limit_number", nullable = true, length = 255)
     public String getLessonLimitNumber() {
         return lessonLimitNumber;
     }
@@ -84,6 +106,8 @@ public class Lesson {
         this.lessonLimitNumber = lessonLimitNumber;
     }
 
+    @Basic
+    @Column(name = "lesson_type", nullable = true, length = 255)
     public String getLessonType() {
         return lessonType;
     }
@@ -92,6 +116,8 @@ public class Lesson {
         this.lessonType = lessonType;
     }
 
+    @Basic
+    @Column(name = "lesson_teacher_name", nullable = true, length = 255)
     public String getLessonTeacherName() {
         return lessonTeacherName;
     }
@@ -100,6 +126,8 @@ public class Lesson {
         this.lessonTeacherName = lessonTeacherName;
     }
 
+    @Basic
+    @Column(name = "lesson_totalweek", nullable = true, length = 255)
     public String getLessonTotalweek() {
         return lessonTotalweek;
     }
@@ -108,6 +136,8 @@ public class Lesson {
         this.lessonTotalweek = lessonTotalweek;
     }
 
+    @Basic
+    @Column(name = "lesson_time", nullable = true, length = 255)
     public String getLessonTime() {
         return lessonTime;
     }
@@ -116,6 +146,8 @@ public class Lesson {
         this.lessonTime = lessonTime;
     }
 
+    @Basic
+    @Column(name = "lesson_location", nullable = true, length = 255)
     public String getLessonLocation() {
         return lessonLocation;
     }
@@ -124,6 +156,8 @@ public class Lesson {
         this.lessonLocation = lessonLocation;
     }
 
+    @Basic
+    @Column(name = "lesson_credit_type", nullable = true, length = 255)
     public String getLessonCreditType() {
         return lessonCreditType;
     }
@@ -132,6 +166,8 @@ public class Lesson {
         this.lessonCreditType = lessonCreditType;
     }
 
+    @Basic
+    @Column(name = "lesson_tips", nullable = true, length = 255)
     public String getLessonTips() {
         return lessonTips;
     }
@@ -140,6 +176,8 @@ public class Lesson {
         this.lessonTips = lessonTips;
     }
 
+    @Basic
+    @Column(name = "lesson_avg_comment_mark", nullable = true, length = 255)
     public String getLessonAvgCommentMark() {
         return lessonAvgCommentMark;
     }
@@ -148,6 +186,8 @@ public class Lesson {
         this.lessonAvgCommentMark = lessonAvgCommentMark;
     }
 
+    @Basic
+    @Column(name = "lesson_male", nullable = true)
     public Integer getLessonMale() {
         return lessonMale;
     }
@@ -156,6 +196,8 @@ public class Lesson {
         this.lessonMale = lessonMale;
     }
 
+    @Basic
+    @Column(name = "lesson_female", nullable = true)
     public Integer getLessonFemale() {
         return lessonFemale;
     }
